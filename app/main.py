@@ -54,22 +54,22 @@ async def index(file: UploadFile = File(...)):
         }
     }
     
-MODEL_64 = tf.keras.models.load_model('../../checkpoints/model64')
-@app.post('/model64')
-async def index(file: UploadFile = File(...)):
-    image = read_file_as_image(await file.read())
-    image = np.expand_dims(image, 0)
-    predictions = MODEL_64.predict(image)
-    idx = np.argmax(predictions[0]).tolist()
-    print(predictions[0], idx)
-    label = pred_dict[idx]
-    return {
-        'data': {
-            'prediction': label,
-            'idx': idx,
-            'softmax': predictions[0].tolist()
-        }
-    }
+# MODEL_64 = tf.keras.models.load_model('../../checkpoints/model64')
+# @app.post('/model64')
+# async def index(file: UploadFile = File(...)):
+#     image = read_file_as_image(await file.read())
+#     image = np.expand_dims(image, 0)
+#     predictions = MODEL_64.predict(image)
+#     # idx = np.argmax(predictions[0]).tolist()
+#     # print(predictions[0], idx)
+#     # label = pred_dict[idx]
+#     return {
+#         'data': {
+#             # 'prediction': label,
+#             # 'idx': idx,
+#             'softmax': predictions
+#         }
+#     }
 
 if __name__ == '__main__':
     uvicorn.run(app=app, host='127.0.0.1', port=8080)
