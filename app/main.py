@@ -1,6 +1,10 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, File, UploadFile
 import uvicorn
-
+import numpy as np
+from io import BytesIO
+from PIL import Image
+import tensorflow as tf
+import requests
 app = FastAPI()
 
 @app.get('/')
@@ -20,9 +24,34 @@ def index():
         'Next Step': "Go to '/docs' to test the model. You can test the model at the '/predict' endpoint."
     }
     
-@app.post('/predict')
-def index(file: UploadFile = File(...)):
-    pass
+pred_dict = {0: 'benign', 1: 'malignant'}
+    
+def read_file_as_image(data) -> np.ndarray:
+    image = Image.open(BytesIO(data))
+    image = image.resize((64, 64))
+    image = np.asarray(image)
+    return image
 
-if __name__ == '__main__':
-    uvicorn.run(app=app, host='127.0.0.1', port=8080)
+MODEL = tf.keras.models.load_model('../model.h5')
+
+print(MODEL.summary())
+
+@app.post('/predict')
+async def index(file: UploadFile = File(...)):
+    image = read_file_as_image(await file.read())
+    image = np.expand_dims(image, 0)
+    predictions = MODEL.predict(image)
+    idx = np.argmax(predictions[0]).tolist()
+    print(predictions[0], idx)
+    label = pred_dict[idx]
+    return {
+        'data': {
+            'prediction': label,
+            'idx': idx,
+            'softmax': predictions[0].tolist()
+        }
+    }
+    
+
+# if __name__ == '__main__':
+#     uvicorn.run(app=app, host='127.0.0.1', port=8080)
