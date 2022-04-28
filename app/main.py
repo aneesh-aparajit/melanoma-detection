@@ -5,6 +5,8 @@ from io import BytesIO
 from PIL import Image
 import tensorflow as tf
 import requests
+from utils import model64
+
 app = FastAPI()
 
 @app.get('/')
@@ -32,15 +34,15 @@ def read_file_as_image(data) -> np.ndarray:
     image = np.asarray(image)
     return image
 
-MODEL = tf.keras.models.load_model('../model.h5')
+MODEL_RESNET = tf.keras.models.load_model('../../checkpoints/resnet')
 
-print(MODEL.summary())
+print(MODEL_RESNET.summary())
 
-@app.post('/predict')
+@app.post('/resnet')
 async def index(file: UploadFile = File(...)):
     image = read_file_as_image(await file.read())
     image = np.expand_dims(image, 0)
-    predictions = MODEL.predict(image)
+    predictions = MODEL_RESNET.predict(image)
     idx = np.argmax(predictions[0]).tolist()
     print(predictions[0], idx)
     label = pred_dict[idx]
@@ -52,6 +54,22 @@ async def index(file: UploadFile = File(...)):
         }
     }
     
+MODEL_64 = tf.keras.models.load_model('../../checkpoints/model64')
+@app.post('/model64')
+async def index(file: UploadFile = File(...)):
+    image = read_file_as_image(await file.read())
+    image = np.expand_dims(image, 0)
+    predictions = MODEL_64.predict(image)
+    idx = np.argmax(predictions[0]).tolist()
+    print(predictions[0], idx)
+    label = pred_dict[idx]
+    return {
+        'data': {
+            'prediction': label,
+            'idx': idx,
+            'softmax': predictions[0].tolist()
+        }
+    }
 
-# if __name__ == '__main__':
-#     uvicorn.run(app=app, host='127.0.0.1', port=8080)
+if __name__ == '__main__':
+    uvicorn.run(app=app, host='127.0.0.1', port=8080)
