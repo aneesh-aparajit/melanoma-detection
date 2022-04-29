@@ -45,6 +45,19 @@ The data for this project is collected from Kaggle.
 |Benign|360|test|
 
 #### After Augmentation
+
+Code:
+
+```python
+import Augmentor as ag
+p = ag.Pipeline("../data/train/")
+p.rotate90(probability=0.5)
+p.zoom(probability=0.3, min_factor=0.8, max_factor=1.5)
+p.flip_left_right(probability=0.8)
+p.flip_top_bottom(probability=0.3)
+p.random_brightness(probability=0.3, min_factor=0.3, max_factor=1.2)
+p.sample(10000)
+```
 ![After Augmentation](./images/after_augmentation.png)
 
 |Dataset|No. of Images|
@@ -59,6 +72,11 @@ The data for this project is collected from Kaggle.
 |Benign|5503|train|
 |Malignant|300|test|
 |Benign|360|test|
+
+## Evaluation Criterion
+Since, this is a medicine related dataset, we must not focus on the accuracy, but on reducing the number of False Negatives. That is, say a person has skin cancer, but we predict that he/she doesn't have cancer. This is dangerous because he/she may lose his life. But, if we predict that the person has skin cancer even though he/she doesn't although it's a mis-classification, it can be prefered more because, he/she will get it tested and a life may be saved.
+
+So, the metric should be metrics like `False_Negative`, `False_Positive`, `Precision` and `Recall` rather than `Accuracy` in this case.
 
 ## Results
 
@@ -270,35 +288,35 @@ _________________________________________________________________
 #### Train Data
 |Metric|Score|
 |------|-----|
-|loss||
-|auc||
-|false_negative||
-|false_positives||
-|precision||
-|recall||
-|accuracy||
+|loss|0.5062731504440308|
+|auc|0.9309614300727844|
+|false_negative|602.0|
+|false_positives|27.0|
+|precision|0.9463221430778503|
+|recall|0.44155845046043396|
+|accuracy|0.73504638671875|
 
 #### Validation Data
 |Metric|Score|
 |------|-----|
-|loss||
-|auc||
-|false_negative||
-|false_positives||
-|precision||
-|recall||
-|accuracy||
+|loss|0.6643155217170715|
+|auc|0.8909897804260254|
+|false_negative|86.0|
+|false_positives|3.0|
+|precision|0.9166666865348816|
+|recall|0.27731093764305115|
+|accuracy|0.661596953868866|
 
 #### Test Data
 |Metric|Score|
 |------|-----|
-|loss||
-|auc||
-|false_negative||
-|false_positives||
-|precision||
-|recall||
-|accuracy||
+|loss|0.5401652455329895|
+|auc|0.9101296067237854|
+|false_negative|169.0|
+|false_positives|10.0|
+|precision|0.9290780425071716|
+|recall|0.43666666746139526|
+|accuracy|0.728787899017334|
 
 ### 32x32 with Augmented Data
 #### Architecture
