@@ -21,3 +21,13 @@ The data for this project is collected from Kaggle.
     * Link: https://www.kaggle.com/fanconic/skin-cancer-malignant-vs-benign
 * Skin Cancer MNIST - HAM10000
     * Link: https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000
+    
+### Data Distribution
+
+#### Before Augmentation
+![before_augmentation.png](attachment:before_augmentation.png)
+
+#### After Augmentation
+![after_augmentation.png](attachment:after_augmentation.png)
+
+## Results
