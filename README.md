@@ -25,9 +25,9 @@ The data for this project is collected from Kaggle.
 ### Data Distribution
 
 #### Before Augmentation
-![before_augmentation.png](attachment:before_augmentation.png)
+![images/before_augmentation.png](attachment:before_augmentation.png)
 
 #### After Augmentation
-![after_augmentation.png](attachment:after_augmentation.png)
+![images/after_augmentation.png](attachment:after_augmentation.png)
 
 ## Results
