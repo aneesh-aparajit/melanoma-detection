@@ -370,35 +370,35 @@ class CNN(layers.Layer):
 #### Train Data
 |Metric|Score|
 |------|-----|
-|loss||
-|auc||
-|false_negative||
-|false_positives||
-|precision||
-|recall||
-|accuracy||
+|loss|0.37595465779304504|
+|auc|0.935274600982666|
+|false_negative|1547.0|
+|false_positives|242.0|
+|precision|0.9117754697799683|
+|recall|0.6178359985351562|
+|accuracy|0.80124431848526|
 
 #### Validation Data
 |Metric|Score|
 |------|-----|
-|loss||
-|auc||
-|false_negative||
-|false_positives||
-|precision||
-|recall||
-|accuracy||
+|loss|0.5271267294883728|
+|auc|0.8663373589515686|
+|false_negative|257.0|
+|false_positives|35.0|
+|precision|0.8458150625228882|
+|recall|0.4276169538497925|
+|accuracy|0.7077077031135559|
 
 #### Test Data
 |Metric|Score|
 |------|-----|
-|loss||
-|auc||
-|false_negative||
-|false_positives||
-|precision||
-|recall||
-|accuracy||
+|loss|0.4034781754016876|
+|auc|0.9088425636291504|
+|false_negative|99.0|
+|false_positives|32.0|
+|precision|0.8626609444618225|
+|recall|0.6700000166893005|
+|accuracy|0.8015151619911194|
 
 ### 64x64 with Augmented Data
 #### Architecture
@@ -449,35 +449,35 @@ _________________________________________________________________
 #### Train Data
 |Metric|Score|
 |------|-----|
-|loss||
-|auc||
-|false_negative||
-|false_positives||
-|precision||
-|recall||
-|accuracy||
+|loss|0.3086279034614563|
+|auc|0.9400833249092102|
+|false_negative|698.0|
+|false_positives|588.0|
+|precision|0.8506856560707092|
+|recall|0.8275691866874695|
+|accuracy|0.8571269512176514|
 
 #### Validation Data
 |Metric|Score|
 |------|-----|
-|loss||
-|auc||
-|false_negative||
-|false_positives||
-|precision||
-|recall||
-|accuracy||
+|loss|0.39539089798927307|
+|auc|0.8995059728622437|
+|false_negative|131.0|
+|false_positives|80.0|
+|precision|0.7989949584007263|
+|recall|0.7082405686378479|
+|accuracy|0.7887887954711914|
 
 #### Test Data
 |Metric|Score|
 |------|-----|
-|loss||
-|auc||
-|false_negative||
-|false_positives||
-|precision||
-|recall||
-|accuracy||
+|loss|0.3531557321548462|
+|auc|0.9238147735595703|
+|false_negative|29.0|
+|false_positives|72.0|
+|precision|0.7900875210762024|
+|recall|0.9033333659172058|
+|accuracy|0.846969723701477|
 
 ### Transfer Learning on Augmented Data
 #### Architecture
@@ -505,35 +505,37 @@ _________________________________________________________________
 #### Train Data
 |Metric|Score|
 |------|-----|
-|loss||
-|auc||
-|false_negative||
-|false_positives||
-|precision||
-|recall||
-|accuracy||
+|loss|0.006930578034371138|
+|auc|0.9999805688858032|
+|false_negative|4.0|
+|false_positives|4.0|
+|precision|0.9995555877685547|
+|recall|0.9995555877685547|
+|accuracy|0.9995555877685547|
 
 #### Validation Data
 |Metric|Score|
 |------|-----|
-|loss||
-|auc||
-|false_negative||
-|false_positives||
-|precision||
-|recall||
-|accuracy||
+|loss|0.656663715839386|
+|auc|0.8930051922798157|
+|false_negative|179.0|
+|false_positives|179.0|
+|precision|0.8208208084106445|
+|recall|0.8208208084106445|
+|accuracy|0.8208208084106445|
 
 #### Test Data
 |Metric|Score|
 |------|-----|
-|loss||
-|auc||
-|false_negative||
-|false_positives||
-|precision||
-|recall||
-|accuracy||
+|loss|0.4733511507511139|
+|auc|0.9354085922241211|
+|false_negative|80.0|
+|false_positives|80.0|
+|precision|0.8787879347801208|
+|recall|0.8787879347801208|
+|accuracy|0.8787879347801208|
+
+Interesting how, precision, recall and accuracy are equal for all the datasets respectively.
 
 ## Attempts which where unsuccessful for Augmentation
 We thought we should augment the images either by using Augmentation and Albumation libraries or generating new ones. We became over-ambitious just and chose the latter. Just to get unsuccessful.😅
