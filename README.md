@@ -22,6 +22,10 @@ The data for this project is collected from Kaggle.
 * Skin Cancer MNIST - HAM10000
     * Link: https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000
     
+### Sample Images
+
+![Sample Images](./images/sample_images.png)
+    
 ### Data Distribution
 
 #### Before Augmentation
@@ -108,35 +112,35 @@ _________________________________________________________________
 #### Train Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss|0.4670059084892273|
+|auc|0.9204818606376648|
+|false_negative|516.0|
+|false_positives|65.0|
+|precision|0.8963317275047302|
+|recall|0.5213358402252197|
+|accuracy|0.7552654147148132|
 
 #### Validation Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss|0.6094912886619568|
+|auc|0.886875569820404|
+|false_negative|79.0|
+|false_positives|5.0|
+|precision|0.8888888955116272|
+|recall|0.3361344635486603|
+|accuracy|0.680608332157135|
 
 #### Test Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss|0.46654874086380005|
+|auc|0.9121388792991638|
+|false_negative|140.0|
+|false_positives|20.0|
+|precision|0.8888888955116272|
+|recall|0.5333333611488342|
+|accuracy|0.7575758099555969|
 
 ### 64x64 CNN with no Augmentation
 #### Architecture
@@ -187,35 +191,35 @@ _________________________________________________________________
 #### Train Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss|0.7700790166854858|
+|auc|0.9124453663825989|
+|false_negative|923.0|
+|false_positives|4.0|
+|precision|0.9748427867889404|
+|recall|0.1437847912311554|
+|accuracy|0.6095198392868042|
 
 #### Validation Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss|0.937388002872467|
+|auc|0.8764297962188721|
+|false_negative|107.0|
+|false_positives|0.0|
+|precision|1.0|
+|recall|0.10084034502506256|
+|accuracy|0.5931558609008789|
 
 #### Test Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss|0.783999502658844|
+|auc|0.8971203565597534|
+|false_negative|267.0|
+|false_positives|1.0|
+|precision|0.9705882668495178|
+|recall|0.10999999940395355|
+|accuracy|0.5939394235610962|
 
 ### 128x128 CNN with No Augmentation
 #### Architecture
@@ -266,35 +270,35 @@ _________________________________________________________________
 #### Train Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss||
+|auc||
+|false_negative||
+|false_positives||
+|precision||
+|recall||
+|accuracy||
 
 #### Validation Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss||
+|auc||
+|false_negative||
+|false_positives||
+|precision||
+|recall||
+|accuracy||
 
 #### Test Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss||
+|auc||
+|false_negative||
+|false_positives||
+|precision||
+|recall||
+|accuracy||
 
 ### 32x32 with Augmented Data
 #### Architecture
@@ -366,35 +370,35 @@ class CNN(layers.Layer):
 #### Train Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss||
+|auc||
+|false_negative||
+|false_positives||
+|precision||
+|recall||
+|accuracy||
 
 #### Validation Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss||
+|auc||
+|false_negative||
+|false_positives||
+|precision||
+|recall||
+|accuracy||
 
 #### Test Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss||
+|auc||
+|false_negative||
+|false_positives||
+|precision||
+|recall||
+|accuracy||
 
 ### 64x64 with Augmented Data
 #### Architecture
@@ -445,35 +449,35 @@ _________________________________________________________________
 #### Train Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss||
+|auc||
+|false_negative||
+|false_positives||
+|precision||
+|recall||
+|accuracy||
 
 #### Validation Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss||
+|auc||
+|false_negative||
+|false_positives||
+|precision||
+|recall||
+|accuracy||
 
 #### Test Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss||
+|auc||
+|false_negative||
+|false_positives||
+|precision||
+|recall||
+|accuracy||
 
 ### Transfer Learning on Augmented Data
 #### Architecture
@@ -501,32 +505,36 @@ _________________________________________________________________
 #### Train Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss||
+|auc||
+|false_negative||
+|false_positives||
+|precision||
+|recall||
+|accuracy||
 
 #### Validation Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss||
+|auc||
+|false_negative||
+|false_positives||
+|precision||
+|recall||
+|accuracy||
 
 #### Test Data
 |Metric|Score|
 |------|-----|
-|loss|0.4670|
-|auc|0.9205|
-|false_negative|516|
-|false_positives|65|
-|precision|0.8963|
-|recall|0.5213|
-|accuracy|0.7553|
+|loss||
+|auc||
+|false_negative||
+|false_positives||
+|precision||
+|recall||
+|accuracy||
+
+## Attempts which where unsuccessful
+
+### GANs
