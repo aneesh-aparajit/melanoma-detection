@@ -563,3 +563,13 @@ We thought we should augment the images either by using Augmentation and Albumat
 
 ### Generative Adversarial Networks
 ![GANs Output](images/gan_output.png)
+
+## Frameworks Used
+1. TensorFlow
+2. FastAPI
+3. Augmentor
+4. NumPy
+5. Pandas
+6. Matplotlib
+7. PIL
+8. uvicorn
