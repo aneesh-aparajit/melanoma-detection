@@ -535,6 +535,11 @@ _________________________________________________________________
 |recall||
 |accuracy||
 
-## Attempts which where unsuccessful
+## Attempts which where unsuccessful for Augmentation
+We thought we should augment the images either by using Augmentation and Albumation libraries or generating new ones. We became over-ambitious just and chose the latter. Just to get unsuccessful.😅
 
-### GANs
+### Variational Autoencoders
+![VAE Output](images/vae_output.png)
+
+### Generative Adversarial Networks
+![GANs Output](images/gan_output.png)
